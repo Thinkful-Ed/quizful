@@ -1,1 +1,3 @@
-mongo_data node_modules run_mongod
+mongo_data/
+node_modules 
+run_mongod

@@ -1,22 +1,28 @@
+#Quizful:
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+This project is for students to contribute to. The app will run on Openshift, and give students a place to test themselves on HTML, CSS, JavaScript, and any other questions students want to create. 
+
+##Contributing
+
+###Repo instructions
+The master branch is the production code. All pull requests should be made to the staging branch. 
+Issues should contain as much information as possible, including browser vendor, version, console logs, and a description of what you were doing when the error happend. 
+
+###Ways to contribute
+Open Bugs on the repo under issues
+Suggest functionality in the issues
+Add questions and answers to the questions.txt file.
 
 
-Welcome to your Node.js project on Cloud9 IDE!
+###Running the project in C9
+//TODO
 
-This chat example showcases how to use `socket.io` with a static `express` server.
 
-## Running the server
-
-1) Open `server.js` and start the app by clicking on the "Run" button in the top menu.
-
-2) Alternatively you can launch the app from the Terminal:
-
-    $ node server.js
-
-Once the server is running, open the project in the shape of 'https://projectname-username.c9.io/'. As you enter your name, watch the Users list (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
+###To-do list
+add front end
+add tests to the existing endpoints
+add CI tests
+add score endpoints
+add leaderboard endpoints
+add login, tie points to user
+add the ability to get multiple categories

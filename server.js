@@ -24,8 +24,10 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
 app.use(express.static('views'));
+
 // routes ======================================================================
 require('./routes/questions.js')(app)
+
 // launch ======================================================================
 app.listen(port,app_ip_address);
 console.log('The magic happens on port ' + port);

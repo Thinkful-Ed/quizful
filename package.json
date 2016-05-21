@@ -15,5 +15,8 @@
     "morgan": "^1.7.0",
     "passport": "^0.3.2",
     "socket.io": "~0.9.14"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
   }
 }

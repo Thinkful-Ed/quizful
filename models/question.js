@@ -4,7 +4,7 @@ var QuestionSchema = new mongoose.Schema({
     text:String,
     correctAnswer:String,
     possibleAnswers:[String],
-    category:String,
+    language:String,
     curriculum:[String],
     unit:String
 });

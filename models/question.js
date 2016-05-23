@@ -4,7 +4,9 @@ var QuestionSchema = new mongoose.Schema({
     text:String,
     correctAnswer:String,
     possibleAnswers:[String],
-    category:String
+    category:String,
+    curriculum:[String],
+    unit:String
 });
 
 var Question = mongoose.model('Question', QuestionSchema);

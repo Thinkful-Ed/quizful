@@ -1,6 +1,6 @@
 var Question = require('../models/question.js');
 
-module.exports = function(app) {
+module.exports = function(app,jsonParser) {
     app.get('/questions',function(req,res){
         Question.find({},function(err,questions){
             if(err){

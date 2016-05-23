@@ -9,6 +9,7 @@ var passport = require('passport');
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
+var jsonParser = bodyParser.json();
 var session      = require('express-session');
 
 
@@ -26,7 +27,7 @@ app.use(passport.session()); // persistent login sessions
 app.use(express.static('views'));
 
 // routes ======================================================================
-require('./routes/questions.js')(app)
+require('./routes/questions.js')(app,jsonParser)
 
 // launch ======================================================================
 app.listen(port,app_ip_address);

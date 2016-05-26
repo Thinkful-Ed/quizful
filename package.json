@@ -5,7 +5,7 @@
   "main": "server.js",
   "repository": "",
   "scripts": {
-    "test": "mocha test/test.js"
+    "test": "mocha tests/test.js"
   },
   "author": "Mostafa Eweda <mo.eweda@gmail.com>",
   "dependencies": {

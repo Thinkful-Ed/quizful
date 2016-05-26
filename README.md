@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/aric87/tuneful.png)](https://travis-ci.org/thinkful-ed/quizful)
+
 #Quizful:
 
 This project is for students to contribute to. The app will run on Openshift, and give students a place to test themselves on HTML, CSS, JavaScript, and any other questions students want to create. 

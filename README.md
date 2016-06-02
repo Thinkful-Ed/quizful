@@ -16,7 +16,9 @@ If you are submitting a feature, you should include as many details about your i
 You will notice that the existing issues have tags. Tags are a useful way to sort issues, and feel free to add tags that make sense (feature request or bug). The project admin will add tags as needed, so feel free to skip this step. 
 
 #### Making a Pull Request 
-When you make a pull request, make sure that you have the most recent code _from_ the main repo merged into _your_ repo to avoid merge conflicts. If you make a pull request, and GitHub tells you that it cannot be automatically merged, that means there is a conflict. You should handle any conflicts at that time. If you have questions, reach out to any of the folks listed in the contact info section. 
+When you make a pull request, make sure that you have the most recent code _from_ the main repo merged into _your_ repo to avoid merge conflicts. (see [staying up to date](#staying-up-to-date).
+Make sure that the tests pass! (Run `npm run test`). If you're unsure of why their failing, ask someone. 
+If you make a pull request, and GitHub tells you that it cannot be automatically merged, that means there is a conflict. You should handle any conflicts at that time. If you have questions, reach out to any of the folks listed in the contact info section. 
 Once your pull request is submitted, and you know there are no conflicts, you will get a review on that pull request. Either a thumbs up, saying everything is ok or notes on things that should be edited before the pull request is merged. At that time, you can make the edits, push the code to _your_ repo on the same branch the pull request is _from_ and the code will automatically be included in the pull request. 
 Once your code is approved, it will be merged. 
 

@@ -51,9 +51,13 @@ See the [issues](https://github.com/thinkful-ed/quizful/issues) for feature requ
 
 ###Run the project
 Once you start the project, you don't _need_ to start it again. 
-*To keep your local code up to date with the main repo, make sure you "git pull upstream staging"*
 You can use the `npm run easy_run` command instead.
 
+###Staying up to date
+Make sure you are keeping your code up to date. 
+Each time you start, you should `git pull upstream staging` to get the latest code from the staging branch. 
+If you have any conflicts, the command line will tell you where they are. Be sure to fix those before continuing.
+If there are a bunch of changes when you pull the code, then run `npm run easy_start` again to install any new dependencies and rebuild the database. 
 
 ###Project Admins
 If you have questions, you should get in touch with these people for help
@@ -63,3 +67,15 @@ If you have questions, you should get in touch with these people for help
 ###Contributors
 Once you made your first contribution (pull request, or opening an issue), add your name here!!
 [Ryan Lynch](https://github.com/shiftyp)
+
+
+
+###To-do list: See issues for full to-do list
+- add front end
+- add tests to the existing endpoints
+- add CI tests
+- add score endpoints
+- add leaderboard endpoints
+- add login (oAuth => GitHUb?), tie points to user
+- add the ability to get multiple categories
+- add tags for curriculum, setup so user can choose course progress and get questions up to that point

@@ -5,9 +5,20 @@ This project is for students to have a way of testing themselves on the various 
 The app will run on Openshift, and give students a place to test themselves on HTML, CSS, JavaScript, and any other topics students want to create questions for 
 It will also be a student driven project, and allow for students to get into the workflow of contributing to open source work.
 
-###Repo instructions
-The `master` branch is the production code. All pull requests should be made to the `staging` branch. 
-Issues should contain as much information as possible, including browser vendor, version, console logs, and a description of what you were doing when the error happend. 
+###Getting Started
+#### The Repo
+The `master` branch of the main repo is the production code, and you should not make pull requests to it. All pull requests should be made to the `staging` branch on the main repo. 
+To start working on the code, or add questions, you should fork this repo to your own GitHub account. Make changes to your version of hte project, then make a pull request to the `staging` branch of the main repo. 
+
+#### Opening Issues
+Issues are used for both bugs and features. When you open a bug, be sure to include as much information as possible, including any console errors, the browser you were using, and the actions you took to create the bug. 
+If you are submitting a feature, you should include as many details about your idea as you can. 
+You will notice that the existing issues have tags. Tags are a useful way to sort issues, and feel free to add tags that make sense (feature request or bug). The project admin will add tags as needed, so feel free to skip this step. 
+
+#### Making a Pull Request 
+When you make a pull request, make sure that you have the most recent code _from_ the main repo merged into _your_ repo to avoid merge conflicts. If you make a pull request, and GitHub tells you that it cannot be automatically merged, that means there is a conflict. You should handle any conflicts at that time. If you have questions, reach out to any of the folks listed in the contact info section. 
+Once your pull request is submitted, and you know there are no conflicts, you will get a review on that pull request. Either a thumbs up, saying everything is ok or notes on things that should be edited before the pull request is merged. At that time, you can make the edits, push the code to _your_ repo on the same branch the pull request is _from_ and the code will automatically be included in the pull request. 
+Once your code is approved, it will be merged. 
 
 ##Contributing
 
@@ -17,39 +28,38 @@ Issues should contain as much information as possible, including browser vendor,
 - Suggest [new](https://github.com/Thinkful-Ed/quizful/issues/new) functionality in the issues
 - Add questions and answers:
 
-######Adding Questions
+#####Adding Questions
 If you have questions and answers to add, add them to config/seed.js file. Follow the structure of the questions that are there. 
 If you have a question, but not the answers or you're not confident you have the correct answer, add it to questions.txt and someone will fill in the missing data. 
 If you have the answer to one of the questions in questions.txt, remove it from that file, and add all the data to config/seed.js.
 
 ####Running the project, and contributing code:
 See the [issues](https://github.com/thinkful-ed/quizful/issues) for feature requests, and code problems. Each issue is tagged, so you can find things that are within your interest range.
-###Simple Instructions to run the project (for working on the front end)
+
+###Starting the project in C9
 - Go to [Cloud9](https://c9.io) and create an account if you don't already have one
 - Create a new workspace.  
     - The workspace name can be whatever you want. 
-    -  add the clone URL from the repo to the `clone URL` field
+    -  add the clone URL from _your_ repo to the `clone URL` field
     -  Change the workspace type to `Node`
 - `cd` into the project folder (the folder is named whatever you name the project)
-- Run the setup step by typing `npm run easy_run` in the terminal
-- Your project is now running.
-- Nodemon will automatically restart your server when you save a file in the project. 
-- To turn the server off, you can use `ctrl+c` or look in the terminal window for instructions.
-- When you leave the project, and come back, type `npm run easy_run` to open the DB connection and start the server again
+- add a remote link to the project `git remote add upstream https://github.com/Thinkful-Ed/quizful.git`
+- Run the setup step by typing `npm run easy_start` in the terminal
+- Your project is now setup and running. You can start working on it. 
+- To stop the server, you can use `ctrl+c` as you will see noted in the console. 
+- When you come back to work on the project, use the `run` command below.
+
+###Run the project
+Once you start the project, you don't _need_ to start it again. 
+*To keep your local code up to date with the main repo, make sure you "git pull upstream staging"*
+You can use the `npm run easy_run` command instead.
 
 
-###Advanced instructions for running the project outside C9
-- run `npm install`
-- Open a connection to your Mongo instance (You will need to create a Mongo_data folder)
-- In your intital terminal, run the app with `nodemon server.js` 
+###Project Admins
+If you have questions, you should get in touch with these people for help
+[Aric Johnson](https://github.com/aric87) [email](aric@thinkful.com)
 
 
-###To-do list: See issues for full to-do list
-- add front end
-- add tests to the existing endpoints
-- add CI tests
-- add score endpoints
-- add leaderboard endpoints
-- add login (oAuth => GitHUb?), tie points to user
-- add the ability to get multiple categories
-- add tags for curriculum, setup so user can choose course progress and get questions up to that point
+###Contributors
+Once you made your first contribution (pull request, or opening an issue), add your name here!!
+[Ryan Lynch](https://github.com/shiftyp)

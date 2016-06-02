@@ -6,7 +6,7 @@
   "repository": "",
   "scripts": {
     "test": "mocha tests/test.js",
-    "easy_run":"chmod +x ./startup.sh && ./startup.sh"
+    "easy_run":"npm install && chmod +x ./startup.sh && ./startup.sh"
   },
   "author": "Aric Johnson",
   "dependencies": {

@@ -31,15 +31,16 @@ See the [issues](https://github.com/thinkful-ed/quizful/issues) for feature requ
     -  add the clone URL from the repo to the `clone URL` field
     -  Change the workspace type to `Node`
 - `cd` into the project folder (the folder is named whatever you name the project)
-- Run the setup step // TODO
+- Run the setup step by typing `npm run easy_run` in the terminal
 - Your project is now running.
 - Nodemon will automatically restart your server when you save a file in the project. 
-- When you leave the project, and come back, type `COMMAND TO RUN PROJECT` to open the DB connection and start the server again
+- To turn the server off, you can use `ctrl+c` or look in the terminal window for instructions.
+- When you leave the project, and come back, type `npm run easy_run` to open the DB connection and start the server again
 
 
 ###Advanced instructions for running the project outside C9
 - run `npm install`
-- Open a connection to your Mongo instance (You may need to create a Mongo_data folder)
+- Open a connection to your Mongo instance (You will need to create a Mongo_data folder)
 - In your intital terminal, run the app with `nodemon server.js` 
 
 

@@ -5,10 +5,7 @@ exports.run = function(callback, errback) {
         {
             'text':'var foo = 10 + \'20\';',
             'correctAnswer':'1020',
-            'possibleAnswers':['30','\'30\'','TypeError'],
-            'language':'JavaScript',
-            'curriculum':'FEWD001',
-            'unit':'4'
+            'possibleAnswers':['30','\'30\'','TypeError']
         },
         
         function(err, items) {

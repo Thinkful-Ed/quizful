@@ -5,32 +5,72 @@ This project is for students to have a way of testing themselves on the various 
 The app will run on Openshift, and give students a place to test themselves on HTML, CSS, JavaScript, and any other topics students want to create questions for 
 It will also be a student driven project, and allow for students to get into the workflow of contributing to open source work.
 
+###Getting Started
+#### The Repo
+The `master` branch of the main repo is the production code, and you should not make pull requests to it. All pull requests should be made to the `staging` branch on the main repo. 
+To start working on the code, or add questions, you should fork this repo to your own GitHub account. Make changes to your version of hte project, then make a pull request to the `staging` branch of the main repo. 
+
+#### Opening Issues
+Issues are used for both bugs and features. When you open a bug, be sure to include as much information as possible, including any console errors, the browser you were using, and the actions you took to create the bug. 
+If you are submitting a feature, you should include as many details about your idea as you can. 
+You will notice that the existing issues have tags. Tags are a useful way to sort issues, and feel free to add tags that make sense (feature request or bug). The project admin will add tags as needed, so feel free to skip this step. 
+
+#### Making a Pull Request 
+When you make a pull request, make sure that you have the most recent code _from_ the main repo merged into _your_ repo to avoid merge conflicts. (see [staying up to date](#staying-up-to-date).
+Make sure that the tests pass! (Run `npm run test`). If you're unsure of why their failing, ask someone. 
+If you make a pull request, and GitHub tells you that it cannot be automatically merged, that means there is a conflict. You should handle any conflicts at that time. If you have questions, reach out to any of the folks listed in the contact info section. 
+Once your pull request is submitted, and you know there are no conflicts, you will get a review on that pull request. Either a thumbs up, saying everything is ok or notes on things that should be edited before the pull request is merged. At that time, you can make the edits, push the code to _your_ repo on the same branch the pull request is _from_ and the code will automatically be included in the pull request. 
+Once your code is approved, it will be merged. 
+
 ##Contributing
 
-###Repo instructions
-The master branch is the production code. All pull requests should be made to the staging branch. 
-Issues should contain as much information as possible, including browser vendor, version, console logs, and a description of what you were doing when the error happend. 
-
 ###Ways to contribute
-- Open Bugs on the repo under issues
-- Suggest functionality in the issues
-- Add questions and answers.
+####Without setting up, and running the project:
+- Open [new](https://github.com/Thinkful-Ed/quizful/issues/new) Bugs, or add comments to the existing [issues](https://github.com/thinkful-ed/quizful/issues)
+- Suggest [new](https://github.com/Thinkful-Ed/quizful/issues/new) functionality in the issues
+- Add questions and answers:
 
-
-##Adding Questions
+#####Adding Questions
 If you have questions and answers to add, add them to config/seed.js file. Follow the structure of the questions that are there. 
 If you have a question, but not the answers or you're not confident you have the correct answer, add it to questions.txt and someone will fill in the missing data. 
 If you have the answer to one of the questions in questions.txt, remove it from that file, and add all the data to config/seed.js.
 
+####Running the project, and contributing code:
+See the [issues](https://github.com/thinkful-ed/quizful/issues) for feature requests, and code problems. Each issue is tagged, so you can find things that are within your interest range.
 
-###Running the project in C9
-- Clone the projcet to you Cloud9 environment. 
-- `cd` into the project folder
-- run `npm install`
-- run `chmod a+x run_mongod`
-- open a seperate terminal instance, and run `./run_mongod`. You should now have Mongo running. 
-- In your intital terminal, run the app with `nodemon server.js` 
-- Nodemon will automatically restart your server when you save a file in the project. 
+###Starting the project in C9
+- Go to [Cloud9](https://c9.io) and create an account if you don't already have one
+- Create a new workspace.  
+    - The workspace name can be whatever you want. 
+    -  add the clone URL from _your_ repo to the `clone URL` field
+    -  Change the workspace type to `Node`
+- `cd` into the project folder (the folder is named whatever you name the project)
+- add a remote link to the project `git remote add upstream https://github.com/Thinkful-Ed/quizful.git`
+- Run the setup step by typing `npm run easy_start` in the terminal
+- Your project is now setup and running. You can start working on it. 
+- To stop the server, you can use `ctrl+c` as you will see noted in the console. 
+- When you come back to work on the project, use the `run` command below.
+
+###Run the project
+Once you start the project, you don't _need_ to start it again. 
+You can use the `npm run easy_run` command instead.
+
+###Staying up to date
+Make sure you are keeping your code up to date. 
+Each time you start, you should `git pull upstream staging` to get the latest code from the staging branch. 
+If you have any conflicts, the command line will tell you where they are. Be sure to fix those before continuing.
+If there are a bunch of changes when you pull the code, then run `npm run easy_start` again to install any new dependencies and rebuild the database. 
+
+###Project Admins
+If you have questions, you should get in touch with these people for help
+[Aric Johnson](https://github.com/aric87) [email](aric@thinkful.com)
+
+
+###Contributors
+Once you made your first contribution (pull request, or opening an issue), add your name here!!
+[Ryan Lynch](https://github.com/shiftyp)
+
+
 
 ###To-do list: See issues for full to-do list
 - add front end

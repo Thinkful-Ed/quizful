@@ -70,14 +70,3 @@ If you have questions, you should get in touch with these people for help
 Once you made your first contribution (pull request, or opening an issue), add your name here!!
 [Ryan Lynch](https://github.com/shiftyp)
 
-
-
-###To-do list: See issues for full to-do list
-- add front end
-- add tests to the existing endpoints
-- add CI tests
-- add score endpoints
-- add leaderboard endpoints
-- add login (oAuth => GitHUb?), tie points to user
-- add the ability to get multiple categories
-- add tags for curriculum, setup so user can choose course progress and get questions up to that point

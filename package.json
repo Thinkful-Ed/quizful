@@ -1,28 +1,29 @@
 {
-  "name": "chat-example",
+  "name": "Quizful",
   "version": "0.0.0",
   "description": "An app for students to create questions to test themselves on the basics of programming languages",
   "main": "server.js",
   "repository": "",
   "scripts": {
-    "test": "mocha tests/test.js"
+    "test": "mocha tests/test.js",
+    "easy_run":"chmod +x ./startup.sh && ./startup.sh"
   },
-  "author": "Mostafa Eweda <mo.eweda@gmail.com>",
+  "author": "Aric Johnson",
   "dependencies": {
-    "async": "~0.2.8",
-    "body-parser": "^1.15.1",
-    "cookie-parser": "^1.4.1",
-    "express": "~3.2.4",
-    "express-session": "^1.13.0",
-    "mongoose": "^4.4.17",
-    "morgan": "^1.7.0",
-    "passport": "^0.3.2",
-    "socket.io": "~0.9.14"
+    "async": "0.2.8",
+    "body-parser": "1.15.1",
+    "cookie-parser": "1.4.1",
+    "express": "3.2.4",
+    "express-session": "1.13.0",
+    "mongoose": "4.4.17",
+    "morgan": "1.7.0",
+    "passport": "0.3.2",
+    "socket.io": "0.9.14"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-http": "^2.0.1",
-    "mocha": "^2.5.3",
-    "nodemon": "^1.9.2"
+    "chai": "3.5.0",
+    "chai-http": "2.0.1",
+    "mocha": "2.5.3",
+    "nodemon": "1.9.2"
   }
 }

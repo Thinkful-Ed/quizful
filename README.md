@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/aric87/tuneful.png)](https://travis-ci.org/thinkful-ed/quizful)
 #Quizful:
-
-This project is for students to have a way of testing themselves on the various topics they are learning. 
+Quizful is an app for students to test their knowledge of programming technologies, languages, and concepts. 
+This project is open source, for students to have a way of understanding the open source process, as well as the GitHub workflow, while contributing to an app that they can use to better learn programming. 
 The app will run on Openshift, and give students a place to test themselves on HTML, CSS, JavaScript, and any other topics students want to create questions for 
 It will also be a student driven project, and allow for students to get into the workflow of contributing to open source work.
 
@@ -16,6 +16,7 @@ If you are submitting a feature, you should include as many details about your i
 You will notice that the existing issues have tags. Tags are a useful way to sort issues, and feel free to add tags that make sense (feature request or bug). The project admin will add tags as needed, so feel free to skip this step. 
 
 #### Making a Pull Request 
+When your code is ready to be merged into the main repo, you should commit it, push it to _your_ forked repo and make a pull request on GitHub. You can work on whatever branch of _your_ repo you like, and choose that branch in the pull request menu in the "compare" dropdown. The thinkful-ed/quizful staging branch should be the "base".
 When you make a pull request, make sure that you have the most recent code _from_ the main repo merged into _your_ repo to avoid merge conflicts. (see [staying up to date](#staying-up-to-date).
 Make sure that the tests pass! (Run `npm run test`). If you're unsure of why their failing, ask someone. 
 If you make a pull request, and GitHub tells you that it cannot be automatically merged, that means there is a conflict. You should handle any conflicts at that time. If you have questions, reach out to any of the folks listed in the contact info section. 
@@ -44,7 +45,6 @@ See the [issues](https://github.com/thinkful-ed/quizful/issues) for feature requ
     - The workspace name can be whatever you want. 
     -  add the clone URL from _your_ repo to the `clone URL` field
     -  Change the workspace type to `Node`
-- `cd` into the project folder (the folder is named whatever you name the project)
 - add a remote link to the project `git remote add upstream https://github.com/Thinkful-Ed/quizful.git`
 - Run the setup step by typing `npm run easy_start` in the terminal
 - Your project is now setup and running. You can start working on it. 

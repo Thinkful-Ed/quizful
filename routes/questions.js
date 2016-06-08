@@ -10,7 +10,7 @@ module.exports = function(app,jsonParser) {
         })
         
     })
-    app.post('/questions/new',function(req,res){
+    app.post('/questions',function(req,res){
         var possibleAnswers = req.body.possibleAnswers.split(',');
         if(!req.body.text || !req.body.correctAnswer || possibleAnswers.length < 3){
             res.status(400).json({
@@ -31,4 +31,5 @@ module.exports = function(app,jsonParser) {
         }
         )
     })
+    // TODO: Add Post/ Delete routes for editing and deleting questions
 }

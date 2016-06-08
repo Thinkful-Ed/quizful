@@ -11,7 +11,7 @@ var app = server.app;
 
 chai.use(chaiHttp);
 
-describe('Shopping List', function() {
+describe('Quizful', function() {
     before(function(done) {
         seed.run(function() {
             done();

@@ -1,6 +1,10 @@
 var mongoose = require('mongoose');
 // default to a 'localhost' configuration:
 var connection_string = 'localhost/quiz-dev';
+if(global.environment == 'test'){
+    connection_string = 'localhost/quiz-test';    
+}
+
 // if OPENSHIFT env variables are present, use the available connection info:
 
 if(process.env.OPENSHIFT_MONGODB_DB_PASSWORD){

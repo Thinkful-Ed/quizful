@@ -6,8 +6,8 @@
   "repository": "",
   "scripts": {
     "test": "mocha tests/test.js",
-    "easy_start":"chmod +x ./startup.sh && ./startup.sh",
-    "easy_run":"./run.sh"
+    "easy_start":"chmod +x ./scripts/startup.sh && ./scripts/startup.sh",
+    "easy_run":"./scripts/run.sh"
   },
   "author": "Aric Johnson",
   "dependencies": {

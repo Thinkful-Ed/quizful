@@ -24,10 +24,10 @@ app.use(session({ secret: 'quizApp', cookie: { maxAge: 360000 },resave: true, sa
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
-app.use(express.static('views'));
+app.use(express.static('build'));
 
 // routes ======================================================================
-require('./routes/questions.js')(app,jsonParser)
+require('./routes/questions.js')(app,jsonParser);
 
 // launch ======================================================================
 app.listen(port,app_ip_address);

@@ -1,9 +1,9 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-import Login from './components/login';
+import React from 'react'
+import ReactDOM from 'react-dom';
+import LoginPage from './components/login-page';
 
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    ReactDOM.render(<Login />, document.getElementById('app'));
+    ReactDOM.render(<LoginPage />, document.querySelector('.app'));
 });

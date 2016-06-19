@@ -1,0 +1,21 @@
+.nav-main {
+  background-color: $thinkful-blue;
+  color: lighten($thinkful-blue, 28);
+  display: flex;
+  font-family: 'Lato', sans-serif;
+  justify-content: space-between;
+  margin: 0;
+  padding: 15px 8vw;
+
+  li {
+    list-style-type: none;
+
+    &:first-child { // to keep logo centered
+      visibility: hidden;
+    }
+  }
+
+  .login {
+    padding-right: 5vw;
+  }
+}

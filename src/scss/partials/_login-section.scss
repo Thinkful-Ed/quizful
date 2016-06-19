@@ -1,0 +1,159 @@
+%login-field {
+  margin: 5% 9%;
+
+  input {
+    margin: 2%;
+  }
+}
+
+%login-button {
+  border: 2px solid lighten($thinkful-blue, 20);
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+  margin: 2% auto;
+  min-width: 50%;
+  overflow: hidden;
+  padding: 1% 2%;
+  position: relative;
+
+  p {
+    margin: 0;
+    margin-left: 30%;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    transition: 371.292ms 0ms;
+
+  }
+
+  i {
+    font-size: 1.2em;
+    margin-top: 4px;
+    transition: 449.735ms 0ms;
+  }
+
+  &:hover {
+    i {
+      padding-right: 75%;
+    }
+
+    p {
+      opacity: 1;
+      top: 30%;
+    }
+  }
+}
+
+.login-section {
+  font-family: 'Questrial', sans-serif;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 5%;
+  text-align: center;
+  width: 100%;
+
+  h1 {
+    font-size: 2.5em;
+    margin-right: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    align-items: center;
+    background-color: $thinkful-blue;
+    display: flex;
+    padding-top: 0;
+  }
+
+  .heading {
+    color: lighten($thinkful-blue, 40);
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 90%;
+
+    p {
+      font-size: 1.1em;
+      padding-right: 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+      justify-content: space-between;
+      margin-top: -10%;
+      padding-left: 6%;
+      text-align: left;
+    }
+  }
+
+
+  .login-form {
+    background-color: $thinkful-blue;
+    box-shadow: 0 16px 24px -12px gray;
+    color: lighten($thinkful-blue, 28);
+    margin: 10% auto;
+    max-width: 425px;
+    padding: 2% 5%;
+
+    @media screen and (min-width: 426px) {
+      border-radius: 4px;
+      margin: 8% auto;
+    }
+
+    @media screen and (min-width: 768px) {
+      border-left: 2px solid lighten($thinkful-blue, 30);
+      border-radius: 0;
+      box-shadow: none;
+      margin: 0;
+      margin-top: -5%;
+      padding: 0;
+      padding-right: 10vw;
+      width: 100%;
+    }
+  }
+
+  input {
+    width: 90%;
+  }
+
+  .login-name,
+  .login-email {
+    @extend %login-field;
+  }
+
+  input[type="submit"] {
+    @extend %login-button;
+    background-color: lighten($thinkful-blue, 20);
+    border: 2px solid #fff;
+    transition: .5s;
+    width: 50%;
+
+    &:hover {
+      background-color: #aed581;
+    }
+  }
+
+  .login-buttons {
+    button {
+      @extend %login-button;
+    }
+
+    button[name='Github'] {
+      background-color: #fff;
+
+      p {
+        margin-left: 33.1%;
+      }
+    }
+
+    button[name='Google Plus'] {
+      background-color: $google-red;
+      color: #fff;
+    }
+
+    button[name='Facebook'] {
+      background-color: $fb-blue;
+      color: #fff;
+    }
+  }
+}

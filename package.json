@@ -7,7 +7,7 @@
   "scripts": {
     "test": "mocha tests/test.js",
     "easy_start": "chmod +x ./scripts/startup.sh && ./scripts/startup.sh",
-    "easy_run": "./scripts/run.sh",
+    "easy_run": "./scripts/run.sh & npm run serve",
     "serve": "webpack --watch & sass src/scss/main.scss:build/styles.css --watch"
   },
   "author": "Aric Johnson",

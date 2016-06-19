@@ -17,6 +17,10 @@
   padding: 1% 2%;
   position: relative;
 
+  a {
+    color: white;
+  }
+
   p {
     margin: 0;
     margin-left: 30%;
@@ -140,6 +144,10 @@
 
     button[name='Github'] {
       background-color: #fff;
+
+      a {
+        color: #000;
+      }
 
       p {
         margin-left: 33.1%;

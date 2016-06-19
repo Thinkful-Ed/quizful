@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import { Link } from 'react-router';
 
 export default class LoginForm extends Component {
   render() {
@@ -13,12 +14,12 @@ export default class LoginForm extends Component {
           <label for="email">Email: </label>
           <input type="email" id="email" />
         </div>
-        <input type="submit" value="GO!" />
+        <Link to={'/quiz'}><input type="submit" value="GO!" /></Link>
         <h3>-- OR --</h3>
         <div className="login-buttons">
-          <button type="button" name="Github"><i className="fa fa-github" aria-hidden="true"></i><p>GitHub</p></button>
-          <button type="button" name="Google Plus"><i className="fa fa-google-plus" aria-hidden="true"></i><p>Google +</p></button>
-          <button type="button" name="Facebook"><i className="fa fa-facebook" aria-hidden="true"></i><p>Facebook</p></button>
+          <button type="button" name="Github"><Link to={'/quiz'}><i className="fa fa-github" aria-hidden="true"></i><p>GitHub</p></Link></button>
+          <button type="button" name="Google Plus"><Link to={'/quiz'}><i className="fa fa-google-plus" aria-hidden="true"></i><p>Google +</p></Link></button>
+          <button type="button" name="Facebook"><Link to={'/quiz'}><i className="fa fa-facebook" aria-hidden="true"></i><p>Facebook</p></Link></button>
         </div>
       </form>
     )

@@ -4,7 +4,7 @@ export default function Nav() {
     return (
       <nav>
         <ul className="nav-main">
-          <li>Placehold</li>
+          <li>Suggest A Question</li> 
           <li className="logo">Quizful</li>
           <li className="login">Suggest A Question</li>
         </ul>

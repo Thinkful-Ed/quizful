@@ -21,10 +21,7 @@ module.exports = {
             }
         ]
     },
-    plugins: [
-       new ExtractTextPlugin("styles.css")
-    ],
     resolve: {
-        extensions: ['', '.js', '.jsx', '.scss', '.css']
+        extensions: ['', '.js', '.jsx']
     },
 };

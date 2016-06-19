@@ -6,8 +6,8 @@
   "repository": "",
   "scripts": {
     "test": "mocha tests/test.js",
-    "easy_start":"chmod +x ./scripts/startup.sh && ./scripts/startup.sh",
-    "easy_run":"./scripts/run.sh"
+    "easy_start": "chmod +x ./scripts/startup.sh && ./scripts/startup.sh",
+    "easy_run": "./scripts/run.sh"
   },
   "author": "Aric Johnson",
   "dependencies": {
@@ -19,12 +19,20 @@
     "mongoose": "4.4.17",
     "morgan": "1.7.0",
     "passport": "0.3.2",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
     "socket.io": "0.9.14"
   },
   "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
     "chai": "3.5.0",
     "chai-http": "2.0.1",
     "mocha": "2.5.3",
-    "nodemon": "1.9.2"
+    "nodemon": "1.9.2",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
   }
 }

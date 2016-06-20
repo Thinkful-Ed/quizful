@@ -35,7 +35,7 @@ export default class SubmitQuestion extends Component {
 
   render() {
     return (
-      <section className="questionSubmit question-page">
+      <section className="question-page">
         <Nav />
         <form className="question submitQ login-form">
           <h2>Want to add your own question? Then fill in the form below.</h2>

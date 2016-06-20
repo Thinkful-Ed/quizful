@@ -74,11 +74,12 @@
 	  _reactRouter.Router,
 	  { history: _reactRouter.browserHistory },
 	  _react2.default.createElement(_reactRouter.Route, { path: '/', component: _loginPage2.default }),
-	  _react2.default.createElement(_reactRouter.Route, { path: 'quiz', component: _question2.default })
+	  _react2.default.createElement(_reactRouter.Route, { path: 'quiz', component: _question2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'submit-question', component: _questionForm2.default })
 	);
 	
 	document.addEventListener('DOMContentLoaded', function () {
-	  _reactDom2.default.render(_react2.default.createElement(_questionForm2.default, null), document.querySelector('.app'));
+	  _reactDom2.default.render(routes, document.querySelector('.app'));
 	});
 
 /***/ },
@@ -20724,7 +20725,7 @@
 /* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -20735,29 +20736,35 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _reactRouter = __webpack_require__(173);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function Nav() {
 	  return _react2.default.createElement(
-	    "nav",
+	    'nav',
 	    null,
 	    _react2.default.createElement(
-	      "ul",
-	      { className: "nav-main" },
+	      'ul',
+	      { className: 'nav-main' },
 	      _react2.default.createElement(
-	        "li",
+	        'li',
 	        null,
-	        "Suggest A Question"
+	        'Suggest A Question'
 	      ),
 	      _react2.default.createElement(
-	        "li",
-	        { className: "logo" },
-	        "Quizful"
+	        'li',
+	        { className: 'logo' },
+	        'Quizful'
 	      ),
 	      _react2.default.createElement(
-	        "li",
-	        { className: "login" },
-	        "Suggest A Question"
+	        'li',
+	        { className: 'login' },
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: 'submit-question' },
+	          'Suggest A Question'
+	        )
 	      )
 	    )
 	  );
@@ -26431,7 +26438,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'section',
-	        { className: 'questionSubmit question-page' },
+	        { className: 'question-page' },
 	        _react2.default.createElement(_nav2.default, null),
 	        _react2.default.createElement(
 	          'form',

@@ -9,9 +9,10 @@ let routes = (
   <Router history={browserHistory}>
     <Route path="/" component={LoginPage} />
     <Route path="quiz" component={Question} />
+    <Route path="submit-question" component={SubmitQuestion} />
   </Router>
 )
 
 document.addEventListener('DOMContentLoaded', function() {
-    ReactDOM.render(<SubmitQuestion />, document.querySelector('.app'));
+  ReactDOM.render(routes, document.querySelector('.app'));
 });

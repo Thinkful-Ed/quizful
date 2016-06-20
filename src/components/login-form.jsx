@@ -6,11 +6,11 @@ export default class LoginForm extends Component {
     return (
       <form className="login-form">
         <p>Please use your Thinkful Login</p>
-        <div className="login-name">
+        <div className="login-block">
           <label for="name">Name: </label>
           <input type="text" id="name" />
         </div>
-        <div className="login-email">
+        <div className="login-block">
           <label for="email">Email: </label>
           <input type="email" id="email" />
         </div>

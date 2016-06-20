@@ -64,6 +64,10 @@
 	
 	var _reactRouter = __webpack_require__(173);
 	
+	var _questionForm = __webpack_require__(234);
+	
+	var _questionForm2 = _interopRequireDefault(_questionForm);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var routes = _react2.default.createElement(
@@ -74,7 +78,7 @@
 	);
 	
 	document.addEventListener('DOMContentLoaded', function () {
-	  _reactDom2.default.render(routes, document.querySelector('.app'));
+	  _reactDom2.default.render(_react2.default.createElement(_questionForm2.default, null), document.querySelector('.app'));
 	});
 
 /***/ },
@@ -20461,7 +20465,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'login-name' },
+	          { className: 'login-block' },
 	          _react2.default.createElement(
 	            'label',
 	            { 'for': 'name' },
@@ -20471,7 +20475,7 @@
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'login-email' },
+	          { className: 'login-block' },
 	          _react2.default.createElement(
 	            'label',
 	            { 'for': 'email' },
@@ -26353,6 +26357,119 @@
 	
 	exports.default = (0, _createRouterHistory2.default)(_createHashHistory2.default);
 	module.exports = exports['default'];
+
+/***/ },
+/* 234 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _nav = __webpack_require__(171);
+	
+	var _nav2 = _interopRequireDefault(_nav);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var SubmitQuestion = function (_Component) {
+	  _inherits(SubmitQuestion, _Component);
+	
+	  function SubmitQuestion() {
+	    _classCallCheck(this, SubmitQuestion);
+	
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SubmitQuestion).call(this));
+	
+	    _this.getInput = _this.getInput.bind(_this);
+	    _this.state = {
+	      question: '',
+	      answer: '',
+	      incorrect: ''
+	    };
+	    return _this;
+	  }
+	
+	  _createClass(SubmitQuestion, [{
+	    key: 'getInput',
+	    value: function getInput(e) {
+	      console.log();
+	      switch (e.target.id) {
+	        case 'question':
+	          this.setState({
+	            question: e.target.value
+	          });
+	          break;
+	        case 'correct-answer':
+	          this.setState({
+	            answer: e.target.value
+	          });
+	          break;
+	        case 'other-answers':
+	          this.setState({
+	            incorrect: e.target.value
+	          });
+	          break;
+	      }
+	      console.log(this.state);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'section',
+	        { className: 'questionSubmit question-page' },
+	        _react2.default.createElement(_nav2.default, null),
+	        _react2.default.createElement(
+	          'form',
+	          { className: 'question submitQ login-form' },
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            'Want to add your own question? Then fill in the form below.'
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            'For the incorrect answers, use a comma seperated list. e.g - option 1, option 2, option 3'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'login-block' },
+	            _react2.default.createElement('textarea', { id: 'question', type: 'text', onChange: this.getInput, placeholder: 'Your Question...' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'login-block' },
+	            _react2.default.createElement('textarea', { id: 'correct-answer', type: 'text', onChange: this.getInput, placeholder: 'Correct Answer...' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'login-block' },
+	            _react2.default.createElement('textarea', { id: 'other-answers', type: 'text', onChange: this.getInput, placeholder: 'Incorrect Answers...' })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return SubmitQuestion;
+	}(_react.Component);
+	
+	exports.default = SubmitQuestion;
 
 /***/ }
 /******/ ]);

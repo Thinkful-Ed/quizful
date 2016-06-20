@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom';
 import LoginPage from './components/login-page';
 import Question from './components/question';
-import { Router, Route, Link, browserHistory } from 'react-router'
+import { Router, Route, Link, browserHistory } from 'react-router';
+import SubmitQuestion from './components/question-form';
 
 let routes = (
   <Router history={browserHistory}>
@@ -12,5 +13,5 @@ let routes = (
 )
 
 document.addEventListener('DOMContentLoaded', function() {
-    ReactDOM.render(routes, document.querySelector('.app'));
+    ReactDOM.render(<SubmitQuestion />, document.querySelector('.app'));
 });

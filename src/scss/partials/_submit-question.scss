@@ -1,0 +1,10 @@
+.submitQ > .login-block {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+
+  textarea {
+    width: 80%;
+  }
+}

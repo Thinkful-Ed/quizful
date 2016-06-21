@@ -79,7 +79,7 @@
 	);
 	
 	document.addEventListener('DOMContentLoaded', function () {
-	  _reactDom2.default.render(_react2.default.createElement(_questionForm2.default, null), document.querySelector('.app'));
+	  _reactDom2.default.render(routes, document.querySelector('.app'));
 	});
 
 /***/ },
@@ -26460,17 +26460,32 @@
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'login-block' },
-	            _react2.default.createElement('textarea', { id: 'question', type: 'text', onChange: this.getInput, placeholder: 'Your Question...' })
+	            _react2.default.createElement('input', { id: 'question', type: 'text', onChange: this.getInput, required: true }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'question' },
+	              'Your Question...'
+	            )
 	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'login-block' },
-	            _react2.default.createElement('textarea', { id: 'correct-answer', type: 'text', onChange: this.getInput, placeholder: 'Correct Answer...' })
+	            _react2.default.createElement('input', { id: 'correct-answer', type: 'text', onChange: this.getInput, required: true }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'correct-answer' },
+	              'Correct Answer...'
+	            )
 	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'login-block' },
-	            _react2.default.createElement('textarea', { id: 'other-answers', type: 'text', onChange: this.getInput, placeholder: 'Incorrect Answers...' })
+	            _react2.default.createElement('input', { id: 'other-answers', type: 'text', onChange: this.getInput, required: true }),
+	            _react2.default.createElement(
+	              'label',
+	              { htmlFor: 'other-answers' },
+	              'Incorrect Answers...'
+	            )
 	          )
 	        )
 	      );

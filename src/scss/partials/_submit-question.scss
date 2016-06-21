@@ -4,7 +4,39 @@
   justify-content: space-around;
   position: relative;
 
-  textarea {
-    width: 80%;
+  label {
+    left: 60px;
+    position: absolute;
+    top: 10px;
+    transition: .3s;
   }
+
+  input {
+    border: 0;
+    border-bottom: 1px solid white;
+    height: 1.3em;
+    overflow: auto;
+    resize: none;
+    transition: width .3s ease;
+    width: 0;
+
+    &:focus,
+    &:valid {
+      border-bottom: 2px solid $thinkful-blue;
+      outline: none;
+      width: 80%;
+    }
+
+    &:focus + label,
+    &:valid + label {
+      left: 4.7vw;
+      top: -9px;
+      transform: scale(0.8);
+
+      @media screen and (min-width: 1024px) {
+        left: 4.2vw;
+      }
+    }
+  }
+
 }

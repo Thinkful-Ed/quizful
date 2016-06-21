@@ -44,13 +44,16 @@ export default class SubmitQuestion extends Component {
             e.g - option 1, option 2, option 3
           </p>
           <div className="login-block">
-            <textarea id="question" type="text" onChange={this.getInput} placeholder='Your Question...'/>
+            <input id="question" type="text" onChange={this.getInput} required/>
+            <label htmlFor="question">Your Question...</label>
           </div>
           <div className="login-block">
-            <textarea id="correct-answer" type="text" onChange={this.getInput} placeholder='Correct Answer...'/>
+            <input id="correct-answer" type="text" onChange={this.getInput} required/>
+            <label htmlFor="correct-answer">Correct Answer...</label>
           </div>
           <div className="login-block">
-            <textarea id="other-answers" type="text" onChange={this.getInput} placeholder='Incorrect Answers...'/>
+            <input id="other-answers" type="text" onChange={this.getInput} required/>
+            <label htmlFor="other-answers">Incorrect Answers...</label>
           </div>
         </form>
       </section>

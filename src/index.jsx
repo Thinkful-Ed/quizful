@@ -14,5 +14,5 @@ let routes = (
 )
 
 document.addEventListener('DOMContentLoaded', function() {
-  ReactDOM.render(<SubmitQuestion />, document.querySelector('.app'));
+  ReactDOM.render(routes, document.querySelector('.app'));
 });

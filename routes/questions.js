@@ -1,9 +1,9 @@
 'use strict';
 const Question = require('../models/question.js');
 
-module.exports = (app,jsonParser) => {
-    app.get('/questions',(req,res) => {
-        Question.find({},(err,questions) => {
+module.exports = (app, jsonParser) => {
+    app.get('/questions',(req, res) => {
+        Question.find({},(err, questions) => {
             if(err){
                 res.status(404).json({'error':err})
             }
@@ -11,7 +11,13 @@ module.exports = (app,jsonParser) => {
         })
         
     })
-    app.post('/questions',(req,res) => {
+    app.get('/questions/:language', (req, res) => {
+     Question.find({language:req.params.language.toLowerCase()}, (err, questions) => {
+         if (err) res.status(404).json({'error':err})
+         res.status(200).json(questions)     
+     })   
+    })
+    app.post('/questions',(req, res) => {
         let possibleAnswers = req.body.possibleAnswers.split(',');
         if(!req.body.text || !req.body.correctAnswer || possibleAnswers.length < 3){
             res.status(400).json({

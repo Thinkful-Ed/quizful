@@ -32,5 +32,6 @@ require('./routes/questions.js')(app,jsonParser)
 
 // launch ======================================================================
 app.listen(port,app_ip_address);
+module.exports = app;
 console.log('The magic happens on port ' + port);
 console.log('Press ctrl + c to stop the server, and Mongo instance');

@@ -55,6 +55,9 @@ See the [issues](https://github.com/thinkful-ed/quizful/issues) for feature requ
 Once you start the project, you don't _need_ to start it again. 
 You can use the `npm run easy_run` command instead.
 
+###Running the tests
+To run the tests, go to the terminal and use `npm run test --silent`. If something fails, you'll see the output in the command line. If everything passes, you're good to go!
+
 ###Staying up to date
 Make sure you are keeping your code up to date. 
 Each time you start, you should `git pull upstream staging` to get the latest code from the staging branch. 

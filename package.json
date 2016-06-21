@@ -5,7 +5,7 @@
   "main": "server.js",
   "repository": "",
   "scripts": {
-    "test": "mocha tests/test.js",
+    "test": "./scripts/run_mongod.sh && mocha tests/test.js",
     "easy_start":"chmod +x ./scripts/startup.sh && ./scripts/startup.sh",
     "easy_run":"./scripts/run.sh"
   },

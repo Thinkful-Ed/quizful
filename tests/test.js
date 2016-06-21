@@ -50,7 +50,7 @@ describe('Quizful', () => {
                 res.body[0].should.have.property('correctAnswer');
                 res.body[0].correctAnswer.should.equal('test answer')
                 res.body[0].should.have.property('possibleAnswers');
-                res.body[0].possibleAnswers.should.be.a('object');
+                res.body[0].possibleAnswers.should.be.a('array');
                 res.body[0].possibleAnswers.should.be.length(3);
                 res.body[0].possibleAnswers[0].should.equal('test answer 1')
                 res.body[0].should.have.property('language');

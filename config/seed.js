@@ -1,14 +1,13 @@
-var Question = require('../models/question');
+const Question = require('../models/question');
 
-exports.run = function(callback, errback) {
-    Question.create(
-        {
+exports.run = (callback, errback) => {
+    Question.create({
             'text':'var foo = 10 + \'20\';',
             'correctAnswer':'1020',
             'possibleAnswers':['30','\'30\'','TypeError']
         },
         
-        function(err, items) {
+        (err, items) => {
             if (err) {
                 errback(err);
                 return;
@@ -19,10 +18,10 @@ exports.run = function(callback, errback) {
 
 if (require.main === module) {
     require('./connect');
-    exports.run(function() {
-        var mongoose = require('mongoose');
+    exports.run(() => {
+        const mongoose = require('mongoose');
         mongoose.disconnect();
-    }, function(err) {
+    }, (err) => {
         console.error(err);
     });
 }

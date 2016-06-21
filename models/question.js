@@ -1,11 +1,12 @@
-var mongoose = require('mongoose');
+'use strict';
+const mongoose = require('mongoose');
 
-var QuestionSchema = new mongoose.Schema({
+const QuestionSchema = new mongoose.Schema({
     text:String,
     correctAnswer:String,
     possibleAnswers:[String]
 });
 
-var Question = mongoose.model('Question', QuestionSchema);
+const Question = mongoose.model('Question', QuestionSchema);
 
 module.exports = Question;

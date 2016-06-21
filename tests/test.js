@@ -1,25 +1,26 @@
-var chai = require('chai');
-var chaiHttp = require('chai-http');
+'use strict';
+const chai = require('chai');
+const chaiHttp = require('chai-http');
 
 global.environment = 'test';
-var server = require('../server.js');
-var Question = require('../models/question');
-var seed = require('../config/seed');
+const server = require('../server.js');
+const Question = require('../models/question');
+const seed = require('../config/seed');
 
-var should = chai.should();
-var app = server.app;
+const should = chai.should();
+const app = server.app;
 
 chai.use(chaiHttp);
 
-describe('Quizful', function() {
-    before(function(done) {
-        seed.run(function() {
+describe('Quizful', () => {
+    before((done) => {
+        seed.run(() => {
             done();
         });
     });
 
-    after(function(done) {
-        Question.remove(function() {
+    after((done) => {
+        Question.remove(() => {
             done();
         });
     });

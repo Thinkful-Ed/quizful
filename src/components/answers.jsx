@@ -26,6 +26,6 @@ export default class Answer extends Component {
     }
   }
   render() {
-    return <li onClick={this.qCheck}>{this.props.name}<i className={this.state.class} aria-hidden="true"></i></li>
+    return <li onClick={this.qCheck}><i className={this.state.class} aria-hidden="true"></i><p>{this.props.name}</p></li>
   }
 }

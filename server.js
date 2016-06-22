@@ -3,7 +3,7 @@
 require('./config/connect');
 const express  = require('express');
 const app      = express();
-const port     = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8080;
+const port     = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8000;
 const app_ip_address = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 const mongoose = require('mongoose');
 const passport = require('passport');

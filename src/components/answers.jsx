@@ -13,6 +13,7 @@ export default class Answer extends Component {
       class: ""
     })
   }
+  
   qCheck(e) {
     if (e.target.textContent === this.props.answer) {
       this.setState({

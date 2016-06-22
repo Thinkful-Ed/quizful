@@ -46,6 +46,7 @@ See the [issues](https://github.com/thinkful-ed/quizful/issues) for feature requ
     -  add the clone URL from _your_ repo to the `clone URL` field
     -  Change the workspace type to `Node`
 - add a remote link to the project `git remote add upstream https://github.com/Thinkful-Ed/quizful.git`
+- Change the version of Node to 5.5. `nvm install 5.5 && nvm alias default v5.5.0 `
 - Run the setup step by typing `npm run easy_start` in the terminal
 - Your project is now setup and running. You can start working on it. 
 - To stop the server, you can use `ctrl+c` as you will see noted in the console. 

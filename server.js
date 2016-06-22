@@ -3,7 +3,7 @@
 require('./config/connect');
 const express  = require('express');
 const app      = express();
-const port     = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8080;
+const port     = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8000;
 const app_ip_address = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 const mongoose = require('mongoose');
 const passport = require('passport');
@@ -31,7 +31,9 @@ app.use(express.static('build'));
 require('./routes/questions.js')(app,jsonParser);
 
 // launch ======================================================================
-app.listen(port,app_ip_address);
-module.exports = app;
-console.log('The magic happens on port ' + port);
-console.log('Press ctrl + c to stop the server, and Mongo instance');
+app.listen(port,app_ip_address, (err) => {
+    if(err) console.log(err)
+    console.log('The magic happens on port ' + port);
+    console.log('Press ctrl + c to stop the server, and Mongo instance'); 
+});
+    module.exports = app;

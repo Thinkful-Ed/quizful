@@ -1,0 +1,66 @@
+%inlines {
+  animation: fadeIn .5s linear forwards;
+  bottom: 0%;
+  float: left;
+  font-size: 3em;
+  left: 18%;
+  opacity: 0;
+  width: 0;
+}
+
+
+.question-page {
+  background-color: lighten($thinkful-blue, 25);
+  height: 100vh;
+}
+
+.question {
+  background-color: #fff;
+  border: 4px solid lighten($thinkful-blue, 10);
+  font-family: 'Questrial', sans-serif;
+  margin: 2% auto;
+  max-width: 700px;
+  padding: 3%;
+  text-align: center;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 10px auto;
+  max-width: 400px;
+  padding: 0;
+
+  li {
+    background-color: $thinkful-blue;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px -5px gray;
+    color: lighten($thinkful-blue, 25);
+    font-size: 1.5em;
+    margin: 2%;
+    padding: 0 5%;
+    transition: .3s linear;
+
+    &:hover {
+      box-shadow: 0 17px 35px -5px gray;
+    }
+
+    .fa-check {
+      @extend %inlines;
+      color: green;
+    }
+
+    .fa-question {
+      color: gray;
+    }
+
+    .fa-times {
+      @extend %inlines;
+      color: red;
+    }
+  }
+}

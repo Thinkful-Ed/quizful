@@ -1,6 +1,7 @@
-var mongoose = require('mongoose');
+'use strict';
+const mongoose = require('mongoose');
 // default to a 'localhost' configuration:
-var connection_string = 'localhost/quiz-dev';
+let connection_string = 'localhost/quiz-dev';
 if(global.environment == 'test'){
     connection_string = 'localhost/quiz-test';    
 }

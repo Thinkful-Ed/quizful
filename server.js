@@ -1,16 +1,17 @@
+'use strict';
 // get all the tools we need
 require('./config/connect');
-var express  = require('express');
-var app      = express();
-var port     = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8080;
-var app_ip_address = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
-var mongoose = require('mongoose');
-var passport = require('passport');
-var morgan       = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser   = require('body-parser');
-var jsonParser = bodyParser.json();
-var session      = require('express-session');
+const express  = require('express');
+const app      = express();
+const port     = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8000;
+const app_ip_address = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
+const mongoose = require('mongoose');
+const passport = require('passport');
+const morgan       = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser   = require('body-parser');
+const jsonParser = bodyParser.json();
+const session      = require('express-session');
 
 
 
@@ -24,12 +25,15 @@ app.use(session({ secret: 'quizApp', cookie: { maxAge: 360000 },resave: true, sa
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
-app.use(express.static('views'));
+app.use(express.static('build'));
 
 // routes ======================================================================
-require('./routes/questions.js')(app,jsonParser)
+require('./routes/questions.js')(app,jsonParser);
 
 // launch ======================================================================
-app.listen(port,app_ip_address);
-console.log('The magic happens on port ' + port);
-console.log('Press ctrl + c to stop the server, and Mongo instance');
+app.listen(port,app_ip_address, (err) => {
+    if(err) console.log(err)
+    console.log('The magic happens on port ' + port);
+    console.log('Press ctrl + c to stop the server, and Mongo instance'); 
+});
+    module.exports = app;

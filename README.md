@@ -67,7 +67,7 @@ If there are a bunch of changes when you pull the code, then run `npm run easy_s
 
 ###Project Admins
 If you have questions, you should get in touch with these people for help
-[Aric Johnson](https://github.com/aric87) [email](aric@thinkful.com)
+[Aric Johnson](https://github.com/aric87) [email](mailto:aric@thinkful.com)
 
 
 ###Contributors

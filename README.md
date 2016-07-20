@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/aric87/tuneful.png)](https://travis-ci.org/thinkful-ed/quizful)
+[![Build Status](https://travis-ci.org/aric87/quizful.png)](https://travis-ci.org/thinkful-ed/quizful)
 #Quizful:
 Quizful is an app for students to test their knowledge of programming technologies, languages, and concepts.
 This project is open source, for students to have a way of understanding the open source process, as well as the GitHub workflow, while contributing to an app that they can use to better learn programming.
